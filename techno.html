@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .one{
+        opacity: 90%;
+        cursor: pointer;
+    }
+    .one:hover{
+        opacity: 50%;
+    }
+    .burger{
+        display: none;
+    }
+    /* .mobile-nav{
+        display: none;
+    } */
+    .desktop-nav{
+        display: flex;
+    }
+    @media screen and (max-width: 450px) {
+        body{
+            background-image: url(background-destination-mobile.jpg);
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+        }
+        hr{
+            display: none;
+        }
+        .burger{
+            display: block;
+        }
+        .desktop-nav {
+            display: none !important;
+        }
+        .desktop-nav.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: aliceblue;
+            height: 100vh;
+            width: 250px;
+            padding: 20px;
+            z-index: 999;
+        }
+        /* .mobile-nav{
+            display: block;
+            background-color: azure;
+        } */
+        .main-2{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .space-img{
+            width: 400px;
+        }
+        .left-dest{
+            margin-left: 50px;
+            align-items: center;
+        }
+        .left-dest p{
+            width: 360px;
+        }
+    }
+</style>
+<body style="background-image: url(background-destination-desktop.jpg);color: white;background-size: cover; background-repeat: no-repeat;">
+    <header style="display: flex; align-items: center; padding: 10px;">
+        <img src="logo.svg" width="40px">
+        <img class="burger" src="icon-hamburger.svg">
+        <hr style="width: 370px; height: 0;opacity: 60%;margin-left: 40px;">
+        <div class="desktop-nav" style="text-transform: uppercase;display: flex; gap: 50px; background-color: rgb(37, 59, 77); padding-inline: 100px; height: 60px; opacity: 60%;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            <div class="num1" style="display: flex; align-items: center; gap: 8px;font-size: 12px;">
+              <h4 style="font-weight: bolder; font-size: 15px;">00</h4>
+              <a href="index.html" style="color: white;">Home</a>
+            </div>
+            <div class="num1" style="display: flex; align-items: center;gap: 8px; font-size: 12px;">
+                <h4 style="font-weight: bolder; font-size: 15px;">01</h4>
+                <a href="mars.html" style="color: white;">Destination</a>
+            </div>
+            <div class="num1" style="display: flex; align-items: center;gap: 8px; font-size: 12px;">
+                <h4 style="font-weight: bolder; font-size: 15px;">02</h4>
+                <a href="index.html" style="color: white;">Crew</a>
+            </div>
+            <div class="num1" style="display: flex; align-items: center;gap: 8px; font-size: 12px;">
+                <h4 style="font-weight: bolder; font-size: 15px;">03</h4>
+                <a href="techno.html" style="color: white;">Technology</a>
+            </div>
+        </div>
+        <!-- <div class="mobile-nav">
+            <div class="num1" style="display: flex; align-items: center; gap: 8px;font-size: 12px;">
+                <h4 style="font-weight: bolder; font-size: 15px;">00</h4>
+                <a href="index.html" style="color: white;">Home</a>
+            </div>
+            <div class="num1" style="display: flex; align-items: center;gap: 8px; font-size: 12px;">
+                <h4 style="font-weight: bolder; font-size: 15px;">01</h4>
+                <a href="mars.html" style="color: white;">Destination</a>
+            </div>
+            <div class="num1" style="display: flex; align-items: center;gap: 8px; font-size: 12px;">
+                <h4 style="font-weight: bolder; font-size: 15px;">02</h4>
+                <a href="index.html" style="color: white;">Crew</a>
+            </div>
+            <div class="num1" style="display: flex; align-items: center;gap: 8px; font-size: 12px;">
+                <h4 style="font-weight: bolder; font-size: 15px;">03</h4>
+                <a href="techno.html" style="color: white;">Technology</a>
+            </div>
+        </div> -->
+    </header>
+    <div class="main-2" style="display: flex;align-items: center; justify-content: space-between;margin-top:-100px;padding:150px; gap: 60px;">
+        <div class="left-dest" style="display: flex; flex-direction: column;align-items: start; text-transform: uppercase;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-top:100px; width: 400px;">
+            <h2><span class="gray" style="color: gray;font-weight: bolder;">02</span>  meet your crew</h2>
+            <h3 style="font-size: 25px; text-transform: uppercase;">Commander</h3>
+            <h1 style="font-size: 35px; text-transform: uppercase;"> Douglas Hurley</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, ullam. Ducimus earum non quibusdam repudiandae veritatis quod, corporis corrupti obcaecati quae nulla, quaerat tenetur ut!</p>
+        </div>
+        <div class="right-dest" style="display: flex; flex-direction: column;margin-top: 100px;">
+            <img class="space-img" src="image-spaceport-portrait.jpg" width="330px">
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
